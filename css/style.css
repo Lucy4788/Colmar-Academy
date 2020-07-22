@@ -1,0 +1,479 @@
+html,
+body{
+    font-family: 'Hind', sans-serif;
+    width: 100%;
+}
+header #mobile,
+#courses-mobile,
+#thesis-mobile,
+footer #mobile{
+    display: none;
+}
+/*-------------Header Navigation-------------*/
+header #desktop{
+    display: inline-block;
+    width: 100%;
+    position: block;
+    z-index: 9999;
+}
+header #desktop img{
+    width: 300px;
+    height: 50px;
+    float: left;
+    padding-top: 0px;
+
+}
+header #desktop ul{
+    margin-top: 0;
+}
+header #desktop ul li{
+    float: right;
+    margin: 10px 20px;
+    list-style: none;
+    padding-top: 0;
+    transition: all 400ms ease-in-out 0.1s;
+}
+header #desktop ul li:hover{
+    font-size: 20px;
+}
+header #desktop ul li a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    transition: all 400ms ease 0.1s;
+}
+header #desktop ul li a:hover{
+    color: #D1BB91;
+}
+@media only screen and (max-width: 480px){
+    header #desktop{
+        display: none;
+    }
+    header #mobile{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-content: space-around;
+        width: 100%;
+        height: 64px;
+    }
+    header #mobile img{
+        width: 70px;
+        height: 60px;
+    }
+    header #mobile ul li {
+        list-style: none;
+        float: right;
+        margin: 5px 25px;
+    }
+    header #mobile ul li i{
+        font-size: 20px;
+        transition: all 400ms ease 0.2s;
+    }
+    header #mobile ul li i:hover{
+        color: #D1BB91;
+        cursor: pointer;
+    }
+}
+/*------------------------Banner------------------------*/
+#banner{
+    position: relative;
+    top: 5px;
+    background-color: #ebe9e2;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: space-between;
+    width: 100%;
+}
+#banner img{
+    width: 650px;
+    height: 450px;
+    align-self: center;
+    margin: 32px 20px;
+}
+#banner .signup{
+    align-self: center;
+    justify-self: center;
+    margin-left: 8px;
+    color: #3A444D;
+}
+#banner .signup h2{
+    font-size: 40px;
+    margin-bottom: 0;
+}
+#banner .signup button{
+    border: 1px solid transparent;
+    background-color: #3A444D ;
+    color: #D1BB91;
+    padding: 8px 7em;
+    font-size: 20px;
+    transition: all 400ms ease 0.15s;
+}
+#banner .signup button:hover{
+    color: #3A444D;
+    background-color: #D1BB91;
+    cursor: pointer;
+
+}
+@media only screen and (max-width: 480px){
+    #banner img{
+        width: 100%;
+        height: 300px;
+        margin-top: 0;
+    }
+    #banner .signup{
+        margin-bottom: 32px;
+    }
+    #banner .signup h2{
+        font-size: 25px;
+        margin-top: 0;
+    }
+    #banner .signup p{
+        font-size: 12px;
+    }
+    #banner .signup button{
+        padding: 8px 5em;
+        font-size: 15px;
+    }
+}
+/*------------------------Main/Info session------------------------*/
+main .info{
+    position: relative;
+    margin: 32px 24px;
+    display: inline-flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    width: 100%;
+    height: 700px;
+}
+main .info .info-desc{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+    width: 60%;
+    
+}
+main .info .info-desc img{
+    width: 700px;
+    height: 400px;
+}
+main .info .info-desc h2{
+    font-size: 44px;
+    font-weight: bolder;
+    color: #3A444D;
+    margin-bottom: 0;
+    margin-top: 32px;
+}
+main .info .info-desc p{
+    color: gray;
+    margin-top: 24px;
+    font-size: 15px;
+    margin-right: 32px;
+    margin-bottom: 32px;
+}
+.school-info{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    width: 40%;
+}
+.school-info img{
+    width: 200px;
+    height: 200px;
+}
+.school-info .details{
+    float: right;
+    margin-left: 24px;
+    justify-self: start;  
+}
+.school-info .details p{
+    font-size: 15px;
+}
+.school-info .details p a{
+    color: #C2A770;
+    border: 1px solid transparent;
+    font-size: 12px;
+    background-color: #3A444D;
+    transition: all 400ms ease-in-out 0.2s;
+    padding: 5px 15px;
+}
+.school-info .details p a:hover{
+    background-color: #C2A770;
+    color: #3A444D;
+}
+@media only screen and (max-width: 480px){
+    main .info-desc img,
+    main .info-desc h2,
+    main .info-desc p{
+        display: none;
+    }
+    main .info{
+        height: 1000px;
+        margin: 0;
+    }
+    .school-info{
+        width: 100%;
+        justify-content: center;
+        align-content: space-between;
+
+    }
+    .school-info img{
+        width: 350px;
+        height: 200px;
+    }
+    .school-info .details{
+        float: none;
+    }
+    .school-info .details p{
+        font-size: 13px;
+        margin-top: 0;
+    }
+    .school-info .details h3{
+        margin-top: 0;
+    }
+}
+/*------------------------Main/List of Courses------------------------*/
+#courses{
+    background-color: #EBE9E2;
+    margin-bottom: 32px;
+}
+#courses h2{
+    text-align: center;
+    padding-top: 32px;
+    padding-bottom: 0;
+    font-size: 40px;
+    letter-spacing: 3px;
+    color: #3A444D;
+    margin-bottom: 0;
+}
+#courses-desktop{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-content: space-around;
+    width: 100%;
+    height: 55em;
+    margin-top: 0;
+}
+#courses-desktop img{
+    width: 350px;
+    height: 180px;
+}
+.course{
+    background-color: white;
+    width: 350px;
+    transition: all 400ms ease 0.1s;
+}
+.course:hover{
+    opacity: 0.6;
+    cursor: pointer;
+}
+.course .course-details{
+    padding: 16px;
+    text-align: left;
+}
+.course .course-details h3{
+    font-size: 25px;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+.course .course-details p{
+    margin-top: 0;
+    color: gray;
+}
+@media only screen and (max-width: 480px){
+    #courses {
+        background-color: transparent;
+    }
+    #courses h2{
+        margin-top: 32px;
+        padding-top: 16px;
+        font-size: 40px;
+        letter-spacing: 3.5px;
+        border-top: 1px solid #EBE9E2;
+    }
+    #courses-desktop{
+        display: none;
+    }
+    #courses-mobile{
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .course-lists h3{
+        background-color: #EBE9E2;
+        padding: 30px;
+        text-align: center;
+        font-size: 25px;
+        transition: all 400ms ease-in-out 0.2s;
+    }
+    .course-lists h3:hover{
+        background-color: #3A444D;
+        color: #C2A770;
+        cursor: pointer;
+    }
+
+}
+/*------------------------Thesis------------------------*/
+.thesis-exhibit{
+    width: 100%;
+    margin: 32px 24px;
+    height: 700px;
+}
+.thesis-exhibit h2{
+    text-align: center;
+    font-size: 40px;
+    letter-spacing: 3px;
+    color: #3A444D;
+}
+.descrp h2{
+    text-align: left;
+}
+.descrp p{
+    padding-top: 0;
+    font-size: 10px;
+}
+.thesis-des h2{
+    text-align: left;
+}
+.thesis-desktop{
+    display: inline-flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-content: space-between;
+    width: 100%;
+    height: 800px;
+}
+.reimagine-urban{
+    display: flex;
+    flex-flow: row wrap;
+    align-content: flex-start;
+    width: 60%;
+}
+.thesis-desktop video{
+    width: 700px;
+    height: 400px;
+}
+.reimagine-urban h2{
+    font-size: 25px;
+    margin-bottom: 0;
+}
+.reimagine-urban p{
+    margin-top: 24px;
+    font-size: 14px;
+    margin-right: 32px;
+    margin-bottom: 32px;
+    color: gray;
+}
+.thesis-lists{
+    display: flex;
+    flex-flow: row wrap;
+    align-content: flex-start;
+    width: 40%;
+    transition: all 400ms ease 0.1s;
+}
+.thesis-lists:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
+.thesis img{
+    width: 140px;
+    height: 140px;
+}
+.thesis .thesis-des{
+    float: right;
+    margin-left: 24px;
+    justify-self: start;  
+}
+.thesis .thesis-des p{
+    font-size: 14px;
+    color: gray;
+}
+.thesis .thesis-des h2{
+    font-size: 15px;
+}
+@media only screen and (max-width: 480px){
+    .thesis-desktop{
+        display: none;
+    }
+    .thesis-exhibit{
+        width: 100%;
+        margin: 0;
+        height: 430px;
+    }
+    .thesis-exhibit h2{
+        border-top: 1px solid #EBE9E2;
+        padding-top: 16px;
+        margin-bottom: 16px;
+    }
+    #thesis-mobile{
+        display: inline-block;
+        margin: 0;
+    }
+    #thesis-mobile video{
+        width: 100%;
+        height: 300px;
+        padding-top: 0;
+    }
+}
+/*------------------------Footer------------------------*/
+footer #desktop{
+    display: flex;
+    padding: 16px 24px;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-content: stretch;
+    background-color: #EBE9E2;
+    width: auto;
+    height: 50px;
+}
+#desktop .legals p,
+#desktop .legals p a,
+#desktop .web-dev p a{
+    font-size: 12px;
+    text-decoration: none;
+    color: black;
+    margin-top: 0;
+}
+#desktop .web-dev{
+    align-self: stretch;
+    padding-right: 24px;
+}
+#desktop .legals p a,
+#desktop .web-dev p a{
+    transition: all 400ms ease 0.2s;
+}
+#desktop .web-dev p a:hover{
+    font-size: 15px;
+    font-weight: bolder;
+}
+#desktop .legals p a:hover{
+    font-weight: bold;
+    text-decoration: underline;
+}
+@media only screen and (max-width: 480px){
+    footer #desktop{
+        display: none;
+    }
+    footer #mobile{
+        display: flex;
+        flex-flow: column wrap;
+        align-content: center;
+        justify-content: center;
+    }
+    footer #mobile p{
+        align-self: center;
+        font-size: 10px;
+    }   
+    footer #mobile p a {
+        text-decoration: none;
+        color: purple;
+    }
+    footer #mobile p .fa-code{
+        color: purple;
+    }
+}
+
